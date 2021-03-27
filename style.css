@@ -1,19 +1,14 @@
 body {
-   
     margin: 0;
-
 }
+
 .header {
     height: 50px;
     margin: 0px;
-    border-color: white;
     font-family: Oi;
     font-size: 40px;
     text-align: center;
     color: rgb(189, 71, 35);
-    position: sticky;
-}
-div {
     border-bottom: 1px solid rgb(189, 71, 35);
     margin-left: 10px;
     margin-right: 10px;
@@ -22,13 +17,100 @@ div {
 
 .container {
     font-family: Abril Fatface;
+    color:rgb(189, 71, 35);
+
     
 }
 
-img {
-    border-bottom: 10px;
-}
 .meal {
+    display: grid;
+    border-bottom: 1px solid rgb(189, 71, 35);
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+    "day changeMeal"
+    "mealName foodPic"
+    "ingredients foodPic"
+}
 
+@media (max-width: 500px) {
+    .meal {
+        grid-template-areas:
+        "day"
+        "mealName"
+        "foodPic"
+        "ingredients"
+        "changeMeal"
+    }
+    .day {
+       justify-self: center;
+    }
+    .mealName {
+        justify-self: center;
+    }
+    .ingredients {
+        justify-self: center;
+    }
+    .foodPic {
+        justify-self: center;
+    }
+    .changeMeal {
+        justify-self: center;
+    }
+}
+
+.day {
+    font-size: 25px;
+    grid-area: day;
+    margin-bottom: 10px;
+}
+
+.mealName {
+    font-size: 20px;
+    grid-area: mealName;
+    margin-bottom: 10px;
+}
+
+.ingredients {
+    font-size: 15px;
+    grid-area: ingredients;
+    margin-bottom: 10px;
+}
+
+.foodPic {
+    grid-area: foodPic;
+    margin-bottom: 10px;
+}
+
+.changeMeal {
+    margin-bottom: 10px;
+    grid-area: changeMeal;
+}
+
+.button {
+    width: 250px;
+    background-color: white;
+    height: 25px;
+    border-radius: 12.5px;
+    border-width: 1px;
+    border-color:rgb(189, 71, 35);
+    font-family: Abril Fatface;
+    color: rgb(189, 71, 35);
 
 }
+
+.button:hover {
+    background-color:rgb(189, 71, 35);
+    color: white;
+}
+
+.food {
+    width: 250px;
+    border: 1px solid rgb(189, 71, 35);
+    border-radius: 12.5px;
+}
+
+
